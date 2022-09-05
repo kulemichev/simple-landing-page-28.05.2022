@@ -1,0 +1,45 @@
+.navbar {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+
+  &__list {
+    @include unlist;
+  }
+
+  &__item {
+    &.active {
+      a {
+        background-color: $color-primary-3;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+
+    padding: 0.5em 1em;
+
+    transition: background-color 1s;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    opacity: 0.5;
+    color: $color-light;
+    background-color: rgba($color-secondary-2-1, 0.25);
+
+    font-size: 1.5rem;
+    font-weight: 100;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba($color-secondary-2-1, 0.5);
+    }
+  }
+}
+
+
