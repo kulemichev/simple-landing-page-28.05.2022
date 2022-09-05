@@ -1,31 +1,32 @@
 .footer {
-  color: #5796a7;
-  background-color: #034052;
-}
+  color: $color-secondary-2-1;
+  background-color: $color-secondary-2-4;
 
-.footer__copyright {
-  text-align: center;
-}
+  &__copyright {
+    text-align: center;
+  }
 
-.footer__contacts {
-  display: flex;
-  justify-content: center;
+  &__contacts {
+    display: flex;
+    justify-content: center;
 
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
+    margin: 0;
+    margin-bottom: $gap;
+    padding: 0;
 
-  list-style: none;
+    list-style: none;
 
-  font-size: 2rem;
+    font-size: 2rem;
 
-  gap: 20px;
-}
+    gap: $gap;
+    @include unlist;
+  }
 
-.footer__links {
-  color: inherit;
-}
+  &__links {
+    color: inherit;
 
-.footer__links:hover {
-  color: #ffffff;
+    &:hover {
+      color: #ffffff;
+    }
+  }
 }

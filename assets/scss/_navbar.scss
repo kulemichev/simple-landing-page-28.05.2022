@@ -5,38 +5,39 @@
   right: 0;
 
   transform: translateY(-50%);
-}
 
-.navbar__list {
-  margin: 0;
-  padding: 0;
+  &__list {
+    @include unlist;
+  }
 
-  list-style: none;
-}
+  &__item {
+    &.active {
+      a {
+        background-color: $color-primary-3;
+      }
+    }
+  }
 
-.navbar__item.active a {
-  background-color: #aa2713;
-}
+  &__link {
+    display: block;
 
-.navbar__link {
-  display: block;
+    padding: 0.5em 1em;
 
-  padding: 0.5em 1em;
+    transition: background-color 1s;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 
-  transition: background-color 1s;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+    opacity: 0.5;
+    color: $color-light;
+    background-color: rgba($color-secondary-2-1, 0.25);
 
-  opacity: 0.5;
-  color: #ffffff;
-  background-color: rgba(87, 150, 167, 0.25);
+    font-size: 1.5rem;
+    font-weight: 100;
 
-  font-size: 1.5rem;
-  font-weight: 100;
-}
-
-.navbar__link:hover {
-  opacity: 1;
-  background-color: rgba(87, 150, 167, 0.5);
+    &:hover {
+      opacity: 1;
+      background-color: rgba($color-secondary-2-1, 0.5);
+    }
+  }
 }
