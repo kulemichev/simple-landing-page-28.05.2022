@@ -1,0 +1,49 @@
+.frontend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $color-light;
+  background-image: url(../img/fe-logo.png);
+  background-repeat: no-repeat;
+  background-position: -10% -10%;
+  background-size: 75%;
+  text-shadow: 5px 5px 10px $color-light, 0 0 30px $color-light;
+
+  @extend %section;
+
+  &__overlay {
+    background: linear-gradient(135deg,  rgba($color-light, 0.4) 50%, rgba($color-secondary-1-1, 0.4) 100%);
+
+    @include abs-position;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    color: $color-secondary-2-4;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__subtitle {
+    padding-left: 300px;
+
+    @include section-subtitle($color-secondary-2-4);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__description {
+    padding-left: 270px;
+
+    transform: translateY(40px);
+
+    @extend %section-description;
+  }
+}
