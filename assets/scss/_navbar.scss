@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+}
+
+.navbar__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navbar__item.active a {
+  background-color: #aa2713;
+}
+
+.navbar__link {
+  display: block;
+
+  padding: 0.5em 1em;
+
+  transition: background-color 1s;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+  color: #ffffff;
+  background-color: rgba(87, 150, 167, 0.25);
+
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.navbar__link:hover {
+  opacity: 1;
+  background-color: rgba(87, 150, 167, 0.5);
+}

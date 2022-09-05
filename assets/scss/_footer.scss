@@ -1,0 +1,31 @@
+.footer {
+  color: #5796a7;
+  background-color: #034052;
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style: none;
+
+  font-size: 2rem;
+
+  gap: 20px;
+}
+
+.footer__links {
+  color: inherit;
+}
+
+.footer__links:hover {
+  color: #ffffff;
+}

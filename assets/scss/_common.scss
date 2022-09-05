@@ -2,168 +2,32 @@
   box-sizing: border-box;
 }
 html {
-  color: #ffffff;
+  color: $color-light;
 
-  font-family: "Roboto", sans-serif;
+  font-family: $font-main;
   font-size: 16px;
 }
 
 h1 {
-  font-family: "Roboto Slab", serif;
+  font-family: $font-header;
 }
 
 h2 {
-  font-family: "Roboto Slab", serif;
+  font-family: $font-header;
 }
 
 h3 {
-  font-family: "Roboto Slab", serif;
+  font-family: $font-header;
 }
 
 a {
   text-decoration: none;
 
-  color: #ffffff;
+  color: $color-light;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: $xl;
   margin: auto;
-  padding: 100px 20px;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 999;
-  top: 50%;
-  right: 0;
-
-  transform: translateY(-50%);
-}
-
-.navbar__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.navbar__item.active a {
-  background-color: #aa2713;
-}
-
-.navbar__link {
-  display: block;
-
-  padding: 0.5em 1em;
-
-  transition: background-color 1s;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  opacity: 0.5;
-  color: #ffffff;
-  background-color: rgba(87, 150, 167, 0.25);
-
-  font-size: 1.5rem;
-  font-weight: 100;
-}
-
-.navbar__link:hover {
-  opacity: 1;
-  background-color: rgba(87, 150, 167, 0.5);
-}
-
-.header {
-  background-color: #034052;
-  background-image: url(../img/potential.jpg);
-  background-position: 50% 80%;
-  background-size: cover;
-}
-
-.header__overlay {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  opacity: 0.4;
-}
-
-.header__overlay::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  content: "";
-
-  background-color: #d53d27;
-
-  clip-path: polygon(100% 20%, 100% 20%, 100% 80%, 0% 100%);
-}
-
-.header__overlay-extra::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  content: "";
-
-  background-color: #034052;
-
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 0% 100%);
-}
-
-.header__overlay-extra::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  content: "";
-
-  background-color: #034052;
-
-  clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
-}
-
-.header__title {
-  position: absolute;
-  top: 7%;
-  left: 7%;
-
-  width: 100%;
-  margin: 0;
-
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-
-  font-size: 7rem;
-}
-
-.header__title span {
-  display: block;
-}
-
-.header__title span:nth-of-type(1) {
-  font-weight: 100;
-}
-
-.header__title span:nth-of-type(2) {
-  font-weight: 100;
-}
-
-.header__title span:nth-of-type(3) {
-  position: relative;
-
-  font-size: 10rem;
-  font-weight: 900;
+  padding: 100px $gap;
 }
